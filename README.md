@@ -1,6 +1,6 @@
-# Vue PouchDB Lite
+# Vue3 PouchDB Lite
 
-A really lite Vue plugin to get your PouchDB databases in every instance.
+A really lite Vue plugin to get your PouchDB databases in every instance. This repo is for the changes needed to make it work in vue3/vitejs
 
 ##### Some content extracted from https://github.com/MDSLKTR/pouch-vue with a lot of api changes though.
 
