@@ -55,6 +55,7 @@ export default {
         config => {
           // if the selector is now giving a value of null or undefined, then return
           // the previous liveFeed object will remain
+          //emit now inject?
           if (!config) {
             this.$emit('pouchdb-livefeed-error', {
               db: key,
@@ -78,6 +79,7 @@ export default {
           } else if (typeof databaseParam === 'string') {
             db = this.$pouch.getDB(databaseParam)
           }
+          //emit now inject?
           if (!db) {
             this.$emit('pouchdb-livefeed-error', {
               db: key,
@@ -141,7 +143,7 @@ export default {
     })
   },
   // tear down the liveFeed objects
-  beforeDestroy() {
+  beforeUnmount() {
     Object.keys(this._liveFeeds).map(lfKey => {
       this._liveFeeds[lfKey].cancel()
     })
